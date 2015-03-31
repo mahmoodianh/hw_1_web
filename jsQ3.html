@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+ 
+	<table id = "main_table"> 
+  <tr> 
+    <td>Student Number</td> 
+    <td>First Name</td> 
+    <td>Last Name</td> 
+    <td colspan="2">Age</td> 
+  </tr> 
+  <tr> 
+    <td>90909090</td> 
+    <td>Steven</td> 
+    <td>Wilson</td> 
+    <td colspan="2">46</td> 
+  </tr> 
+  <tr id="final_row"> 
+    <td ><input type="text" id="sid" /></td> 
+    <td ><input type="text" id="fname"/></td> 
+    <td ><input type="text" id="lname"/></td> 
+    <td ><input type="text" id="age"/></td> 
+    <td ><input type="button" id="push"value="Add" />
+	
+	</td> 
+  </tr> 
+</table> 
+	
+ 
+
+
+</body>
+<script>
+		
+		var sel_this = document.getElementById("push");
+		sel_this.setAttribute("onclick" , "func();")
+		
+		
+		
+		function func()
+			{
+			var tr_elem = document.createElement("tr");
+			
+			
+			var td1_elem = document.createElement("td");
+			var td2_elem = document.createElement("td");
+			var td3_elem = document.createElement("td");
+			var td4_elem = document.createElement("td");
+			
+			
+			
+			var node = document.createTextNode(document.getElementById("sid").value);
+			document.getElementById("sid").value=null;
+			td1_elem.appendChild(node);
+			tr_elem.appendChild(td1_elem);
+			
+			
+			var node = document.createTextNode(document.getElementById("fname").value);
+			document.getElementById("fname").value=null;
+			td2_elem.appendChild(node);
+			tr_elem.appendChild(td2_elem);
+			
+			var node = document.createTextNode(document.getElementById("lname").value);
+			document.getElementById("lname").value=null;
+			td3_elem.appendChild(node);
+			tr_elem.appendChild(td3_elem);
+			
+			var node = document.createTextNode(document.getElementById("age").value);
+			document.getElementById("age").value=null;
+			td4_elem.appendChild(node);
+			tr_elem.appendChild(td4_elem);
+			
+			
+			
+
+			var element = document.getElementById("main_table");
+			var remove_element = document.getElementById("final_row");
+			remove_element.remove();
+			
+				
+			element.appendChild(tr_elem);
+			element.appendChild(remove_element);
+			
+  
+			}
+			
+		
+	
+	</script>
+</html>

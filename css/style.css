@@ -1,7 +1,8 @@
 body {
     background: url(../img/body_back.png);
   
-    
+   
+
     font-size: 14px;
 	width : 960px;
 
@@ -133,11 +134,7 @@ width : 680px;
 margin-left : 190px;
 }
 
-.logo{
 
-
-
-}
 
  tr:nth-child(even) {
     background-color: #eee;
@@ -153,4 +150,10 @@ padding-bottom : 30px;
 padding-top : 10px;
 
 }
+=======
+padding-left : 300px;
+
+}
+
+
 

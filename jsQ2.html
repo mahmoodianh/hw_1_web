@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+ <div > 
+	<style>
+ div { 
+ 
+ background-color:#AAA;
+ position: absolute;
+ padding : 20px;
+ 
+ left : 0px;
+ 
+ top : 0px;
+ border-radius : 40px;
+ 
+ }
+	</style>
+	<script>
+		var sel_this = document.querySelector("div");
+		var num_x =0;
+		var num_y =0;
+		sel_this.setAttribute("onclick" , "func();")
+		
+		
+		function func()
+			{
+			
+			function repeatOften() 
+			{
+				var y = window.innerWidth;
+				var x = window.innerHeight;
+				num_x =num_x + x/300;
+				num_y =num_y + y/300;
+				if(num_x < x-40 && num_y <y-40)
+				{
+					var sel_this = document.querySelector("div");
+					sel_this.style.setProperty("left",num_y.toString()+"px")
+					sel_this.style.setProperty("top",num_x.toString()+"px")
+				}
+				requestAnimationFrame(repeatOften);
+  
+			}
+requestAnimationFrame(repeatOften);
+			
+  // Do whatever
+ 
+  
+			 
+		//	window.alert(window.innerWidth);
+			
+		
+			}	
+			
+		
+	
+	</script>
+ 
+ Start
+ </div>
+
+</body>
+</html>

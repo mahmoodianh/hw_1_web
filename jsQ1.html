@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+ <input type="text" > 
+	<script> 
+	var sel_this = document.querySelector("input");
+	sel_this.setAttribute("oninput" , "func();")
+	function func() {
+	var in_var = document.querySelector("input");	
+	if((in_var.value.search("A") > -1) 
+	|| (in_var.value.search("U") > -1) 
+	|| (in_var.value.search("O") > -1) 
+	|| (in_var.value.search("C") > -1) 
+	|| (in_var.value.search("N") > -1))
+		{
+			in_var.value=in_var.value.substring(0,in_var.value.length-1);
+	
+		}
+	}
+	
+  
+			
+ 
+  // Your code here. 
+  </script> 
+  </input>
+
+</body>
+</html>
